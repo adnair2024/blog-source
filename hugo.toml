@@ -1,6 +1,6 @@
 baseURL = "https://adnair2024.github.io/blog/"
 languageCode = "en-us"
-title = "My New Blog"
+title = "Ash's Blog"
 theme = "brewm"
 
 # Important for subdirectory deployment:
