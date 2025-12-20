@@ -10,3 +10,9 @@ relativeURLs = false
 [params.home]
   featuredListing = ['categories', 'tags']
   disableSlide = false
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 10
+  pre = "🏠" # Unicode house emoji
