@@ -1,4 +1,4 @@
-# My New Blog
+# My blog
 
 ![Hugo](https://img.shields.io/badge/Hugo-000000?style=for-the-badge&logo=hugo&logoColor=FF4088)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)
