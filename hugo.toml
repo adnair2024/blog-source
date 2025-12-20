@@ -15,4 +15,3 @@ relativeURLs = false
   name = "Home"
   url = "/"
   weight = 10
-  pre = "🏠" # Unicode house emoji
