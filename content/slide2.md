@@ -7,10 +7,10 @@ params:
     headless: true
 ---
 
-i aspire to be a developer. I'd like to be a really good python developer. I
+i aspire to be a developer. I'd like to be a really good python developer. i
 currently messing around with:
 -   Python
--   web frameworks like three.js
--   lua (mainly for neovim tinkering)
+-   Web frameworks like three.js
+-   Lua (mainly for neovim tinkering)
 -   C (learning it atleast, so then i can tinker with linux on a kernel level)
 

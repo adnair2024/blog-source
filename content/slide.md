@@ -1,6 +1,6 @@
 ---
 type: 'slide'
-title: 'hi'
+title: 'me'
 cover: 'https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/36.svg'
 weight: 1
 params:
