@@ -1,0 +1,12 @@
+baseURL = "https://adnair2024.github.io/blog/"
+languageCode = "en-us"
+title = "My New Blog"
+theme = "brewm"
+
+# Important for subdirectory deployment:
+relativeURLs = true
+uglyURLs = true
+
+[params.home]
+  featuredListing = ['categories', 'tags']
+  disableSlide = false

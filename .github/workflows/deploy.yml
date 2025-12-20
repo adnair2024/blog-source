@@ -1,0 +1,35 @@
+name: Deploy Hugo Blog to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Trigger on pushes to the main branch of blog-source
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout blog source
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # Fetch Hugo themes
+          fetch-depth: 0     # Fetch all history for .GitInfo and lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+
+      - name: Build Hugo site
+        run: hugo --minify --baseURL "https://adnair2024.github.io/blog/"
+
+      - name: Deploy to adnair2024.github.io/blog/
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GH_PAGES_DEPLOY }} # Use the deploy token
+          publish_dir: ./public
+          destination_dir: blog # Deploy to the 'blog' subdirectory
+          external_repository: adnair2024/adnair2024.github.io # Your main portfolio repo
+          publish_branch: main # The branch of your main portfolio repo
+          cname: adnair2024.github.io # Add your custom domain if you have one, otherwise remove
+          force_orphan: false # Do not orphan the branch, just update the subdirectory
