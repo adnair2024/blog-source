@@ -26,7 +26,7 @@ jobs:
       - name: Deploy to adnair2024.github.io/blog/
         uses: peaceiris/actions-gh-pages@v4
         with:
-          token: ${{ secrets.GH_PAGES_DEPLOY }} # Use the deploy token
+          personal_token: ${{ secrets.GH_PAGES_DEPLOY }} # Use the deploy token
           publish_dir: ./public
           destination_dir: blog # Deploy to the 'blog' subdirectory
           external_repository: adnair2024/adnair2024.github.io # Your main portfolio repo
