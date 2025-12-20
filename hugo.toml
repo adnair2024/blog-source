@@ -5,7 +5,7 @@ theme = "brewm"
 
 # Important for subdirectory deployment:
 relativeURLs = true
-uglyURLs = true
+
 
 [params.home]
   featuredListing = ['categories', 'tags']
