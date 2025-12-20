@@ -4,7 +4,7 @@ title = "Ash's Blog"
 theme = "brewm"
 
 # Important for subdirectory deployment:
-relativeURLs = true
+relativeURLs = false
 
 
 [params.home]
