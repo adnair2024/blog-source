@@ -4,7 +4,8 @@ title = "Ash's Blog"
 theme = "brewm"
 
 # Important for subdirectory deployment:
-relativeURLs = false
+relativeURLs = true
+uglyURLs = true
 
 
 [params.home]
@@ -15,3 +16,13 @@ relativeURLs = false
   name = "Home"
   url = "/"
   weight = 10
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 20
+
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 30

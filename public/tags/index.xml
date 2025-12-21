@@ -2,33 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
   <channel>
     <title>Tags on Ash&#39;s Blog</title>
-    <link>http://localhost:1313/blog/tags/</link>
+    <link>http://localhost:1313/blog/tags.html</link>
     <description>Recent Posts in Tags on Ash&#39;s Blog</description>
     <generator>Hugo 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Dec 2025 15:52:03 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 21 Dec 2025 10:02:48 -0600</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Coding</title>
+      <link>http://localhost:1313/blog/tags/coding.html</link>
+      <pubDate>Sun, 21 Dec 2025 07:56:44 -0600</pubDate>
+      <guid>http://localhost:1313/blog/tags/coding.html</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>http://localhost:1313/blog/tags/markdown.html</link>
+      <pubDate>Sun, 21 Dec 2025 07:56:44 -0600</pubDate>
+      <guid>http://localhost:1313/blog/tags/markdown.html</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Neovim</title>
+      <link>http://localhost:1313/blog/tags/neovim.html</link>
+      <pubDate>Sun, 21 Dec 2025 07:56:44 -0600</pubDate>
+      <guid>http://localhost:1313/blog/tags/neovim.html</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
       <title>Blog</title>
-      <link>http://localhost:1313/blog/tags/blog/</link>
+      <link>http://localhost:1313/blog/tags/blog.html</link>
       <pubDate>Sat, 20 Dec 2025 11:56:44 -0600</pubDate>
-      <guid>http://localhost:1313/blog/tags/blog/</guid>
+      <guid>http://localhost:1313/blog/tags/blog.html</guid>
       <description></description>
       <content:encoded></content:encoded>
     </item>
     <item>
       <title>Intro</title>
-      <link>http://localhost:1313/blog/tags/intro/</link>
+      <link>http://localhost:1313/blog/tags/intro.html</link>
       <pubDate>Sat, 20 Dec 2025 11:56:44 -0600</pubDate>
-      <guid>http://localhost:1313/blog/tags/intro/</guid>
+      <guid>http://localhost:1313/blog/tags/intro.html</guid>
       <description></description>
       <content:encoded></content:encoded>
     </item>
     <item>
       <title>Tech</title>
-      <link>http://localhost:1313/blog/tags/tech/</link>
+      <link>http://localhost:1313/blog/tags/tech.html</link>
       <pubDate>Sat, 20 Dec 2025 11:56:44 -0600</pubDate>
-      <guid>http://localhost:1313/blog/tags/tech/</guid>
+      <guid>http://localhost:1313/blog/tags/tech.html</guid>
       <description></description>
       <content:encoded></content:encoded>
     </item>

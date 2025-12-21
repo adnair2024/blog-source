@@ -6,13 +6,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Categories | Ash&#39;s Blog</title>
+<title>Coding | Ash&#39;s Blog</title>
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/blog/categories.html">
+<link rel="canonical" href="http://localhost:1313/blog/tags/coding.html">
 
 
 
-    <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/categories/index.xml" title="Categories | Ash's Blog (RSS)" />
+    <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/tags/coding/index.xml" title="Coding | Ash's Blog (RSS)" />
     <!-- js.html -->
 
 
@@ -75,21 +75,21 @@
                     
     
         <li role="presentation" >
-    <a   class=on-deck href=./blog/>
+    <a   class=on-deck href=../blog/>
         
             <span>
                 Home</span>
     </a>
         </li>
         <li role="presentation" >
-    <a   class=on-deck href=./blog/posts/>
+    <a   class=on-deck href=../blog/posts/>
         
             <span>
                 Posts</span>
     </a>
         </li>
         <li role="presentation" >
-    <a   class=on-deck href=./blog/tags/>
+    <a   class=on-deck href=../blog/tags/>
         
             <span>
                 Tags</span>
@@ -109,9 +109,20 @@
 </header>
     
     <!-- [main] baseof.html -->
-    <main id="taxonomy">
+    <main id="term">
         <!-- main/header.html -->
         <header class="pagewidth">
+                    <menu id="menu" class="srm"
+                        data-i18n-back="Go Back"
+                        data-i18n-print="Print"
+                        data-i18n-copy="Copy URL"
+                        data-i18n-copying="Copying...">
+                            <li>
+                                <a id="rss-button" href="http://localhost:1313/blog/tags/coding/index.xml" title="Follow with RSS" role="button" aria-label="Follow with RSS">
+                                    <span class="t srt" role="tooltip">Follow with RSS</span>
+                                </a>
+                            </li>
+                    </menu>
                     <div id="has-back">
                     </div>
             <!-- nav.html -->
@@ -122,8 +133,12 @@
         <nav aria-labelledby="breadcrumb">
             <ul role="presentation" class="breadcrumb ">
                     <!-- breadcrumb.html -->
+        <li>
+            <a href="http://localhost:1313/blog/tags.html" aria-current="true">Tags
+            </a>
+        </li>
     <li>
-        <a href="" aria-current="page" tabindex="-1">Categories
+        <a href="" aria-current="page" tabindex="-1">Coding
         </a>
     </li>
             </ul>
@@ -136,36 +151,54 @@
         </div>
         
         
-            <section class="pagewidth">
-                    <h1 id="categories">Categories</h1>
-                    <!-- taxonomies.html -->
-        <ul class="taxonomy" role="presentation">
+            <section id="list-posts" class="pagewidth"  aria-labelledby="list-post-heading">
+                <header id="tag" class="section-title">
+                    <strong id="list-post-heading">Posts on: <span class="tag">Coding</span>
+                    </strong>
+                    <hr class="hide"/>
+                </header>
+                    <div role="feed" aria-busy="false" aria-labelledby="list-post-heading">
+                        <article class="feed-item"
+        aria-posinset="1"
+        aria-setsize="1"
+        aria-labelledby="title-1"
+        aria-describedby="desc-1">
+        <hgroup>
+            <div>
+                <time datetime="2025-12-21T07:56:44-06:00">December 21, 2025</time>
+                <span>
+                        <span>in</span>
+                        <!-- terms.html -->
             
-                    <li >
-                        <a href="http://localhost:1313/blog/categories/general.html"class="section-title" 
-                            aria-label="Category: General"
-                            aria-description="1 Post"
-                            data-post-counter="1"
-                            >
-                            <span>General</span>
-                        </a>
-                            <ul role="presentation">
-                                    <li><a href="http://localhost:1313/blog/post/my-first-post.html">the beginning.</a></li>
-                            </ul>
-                    </li>
-                    <li >
-                        <a href="http://localhost:1313/blog/categories/neovim.html"class="section-title" 
-                            aria-label="Category: Neovim"
-                            aria-description="1 Post"
-                            data-post-counter="1"
-                            >
-                            <span>Neovim</span>
-                        </a>
-                            <ul role="presentation">
-                                    <li><a href="http://localhost:1313/blog/post/my-markdown.html">my-markdown</a></li>
-                            </ul>
-                    </li>
-        </ul>
+                <a href="../blog/categories/neovim.html" tabindex="-1">Neovim</a>
+                </span>
+                
+            </div>
+            <a href="../blog/post/my-markdown.html" class="sr0" tabindex="-1" aria-describedby="desc-1">
+                <h1 id="title-1">my-markdown</h1>
+            </a>
+        </hgroup>
+        <a class="sri" href="../blog/post/my-markdown.html" aria-label="my-markdown" aria-describedby="desc-1"></a>
+        
+        <section >
+            <div class="par" id="desc-1">My relationship with markdown I use markdown every single day. It&rsquo;s become an essential part of my workflow, and this started with note taking apps like Obsidian and Ulysses. When I found Neovim, everything changed. I started just making todo lists in markdown, within Neovim, and since all my notes were .md files, it was a really easy and natural way to organize my thoughts and things I had to do without switching context.
+
+            </div>
+        </section>
+        <footer>
+            <span class="readingTime">5 min read
+            </span>
+            
+                    <!-- terms.html -->
+            <ul class="rounded invert" role="presentation">
+                    <li><a href="../blog/tags/neovim.html" tabindex="-1">Neovim</a></li>
+                    <li><a href="../blog/tags/coding.html" tabindex="-1">Coding</a></li>
+                    <li><a href="../blog/tags/markdown.html" tabindex="-1">Markdown</a></li>
+            </ul>
+        </footer>
+    </article>
+                    </div>
+                    
             </section>
         <div id="exclude" role="presentation">
             <!-- excluded last block frome some RSS reader and browser reader mode -->
