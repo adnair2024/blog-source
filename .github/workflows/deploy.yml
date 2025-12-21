@@ -21,7 +21,7 @@ jobs:
           hugo-version: 'latest'
 
       - name: Build Hugo site
-        run: hugo --minify --baseURL "https://adnair2024.github.io/"
+        run: hugo --minify --baseURL "https://adnair2024.github.io/blog/"
 
       - name: Deploy to adnair2024.github.io/blog/
         uses: peaceiris/actions-gh-pages@v4
