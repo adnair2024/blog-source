@@ -38,7 +38,9 @@ quickly with a single key bind, so they don't have to manually go and edit the
 checkbox every time. The plugin automatically detects the checkbox as long as 
 your cursor is on the same line as the checkbox, and it will go and cycle through
 the states. Below is the rotation of the states in the order that the plugin
-handles them.
+handles them. To neatly render them, I use [`render-markdown`](https://github.com/MeanderingProgrammer/render-markdown.nvim), a neovim plugin
+that uses icons and makes them visually appealing. It also renders tables, and
+headings, so I recommend checking it out.
 
 
 | Current State | Visual | Next State | Purpose | 
