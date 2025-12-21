@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
   <channel>
     <title>Blog on Ash&#39;s Blog</title>
-    <link>http://localhost:1313/tags/blog.html</link>
+    <link>http://localhost:1313/blog/tags/blog.html</link>
     <description>Recent Posts in Blog on Ash&#39;s Blog</description>
     <generator>Hugo 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Dec 2025 10:06:12 -0600</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Dec 2025 10:19:40 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>the beginning.</title>
-      <link>http://localhost:1313/post/my-first-post.html</link>
+      <link>http://localhost:1313/blog/post/my-first-post.html</link>
       <pubDate>Sat, 20 Dec 2025 11:56:44 -0600</pubDate>
-      <guid>http://localhost:1313/post/my-first-post.html</guid>
+      <guid>http://localhost:1313/blog/post/my-first-post.html</guid>
       <description>&lt;p&gt;This is my first post. I&amp;rsquo;ve been trying to make a public blog on GH pages for&#xA;such a long time, and I never got around to doing it. Now, I can finally say&#xA;&amp;ldquo;ha check my blog&amp;rdquo;, and mean it.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m currently using Hugo as the brain for my blog, and a theme called&#xA;&lt;code&gt;hugo-brewm&lt;/code&gt;. It looks really nice, and I had Gemini replicate the demo layout&#xA;because I found it really pretty. Took a couple hours of work, and I spent that&#xA;time drinking coffee and coding in a small coffee shop downstairs from the&#xA;apartment.&lt;/p&gt;</description>
       <content:encoded>&lt;p&gt;This is my first post. I&amp;rsquo;ve been trying to make a public blog on GH pages for&#xA;such a long time, and I never got around to doing it. Now, I can finally say&#xA;&amp;ldquo;ha check my blog&amp;rdquo;, and mean it.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m currently using Hugo as the brain for my blog, and a theme called&#xA;&lt;code&gt;hugo-brewm&lt;/code&gt;. It looks really nice, and I had Gemini replicate the demo layout&#xA;because I found it really pretty. Took a couple hours of work, and I spent that&#xA;time drinking coffee and coding in a small coffee shop downstairs from the&#xA;apartment.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/Zznzw4d_d.webp?maxwidth=1520&amp;amp;fidelity=grand&#34; alt=&#34;coffee&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Above is a picture of the aforementioned coffee.&lt;/p&gt;&#xA;&lt;p&gt;This blog is meant to be a beautiful and brutalist peak into my brain, inspired&#xA;by the design (and home decor) philosophy of Rick Owens. I&amp;rsquo;ve been reading a lot&#xA;about how Owens thinks and performs daily activities, and I think its a nice&#xA;and clean way to go about life. I&amp;rsquo;m going to have to wait to make setup content&#xA;until I&amp;rsquo;m back home, but for now, I&amp;rsquo;ll go ahead and brainstorm some other ideas&#xA;for blog posts. Maybe about Zelda: Tears of The Kingdom?&lt;/p&gt;&#xA;</content:encoded>
       <category>General</category>
