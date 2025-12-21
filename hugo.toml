@@ -20,7 +20,7 @@ canonifyURLs = true
 
 [[menu.main]]
   name = "Posts"
-  url = "/posts/"
+  url = "/posts.html"
   weight = 20
 
 [[menu.main]]
