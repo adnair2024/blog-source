@@ -3,7 +3,7 @@ date = '2025-12-21T7:56:44-06:00'
 draft = false
 title = 'my-markdown'
 type = 'post'
-tags = ['neovim', 'coding', 'markdown']
+tags = ['neovim', 'coding', 'markdown', 'notes']
 categories = ['Neovim']
 +++
 
@@ -110,6 +110,9 @@ below can be copy and pasted to your plugin list.
 ```lua
 {
     'adnair2024/mm',
+    dependencies = {
+        'MeanderingProgrammer/render-markdown.nvim',
+    },
     config = function()
         local mm = require('mm')
         
@@ -125,7 +128,8 @@ below can be copy and pasted to your plugin list.
 The two mappings I have currently are for toggling through the cycles, and one
 for immediately setting it to pending, just for ease of use. The `desc` is just
 to build a habit, and since I use `which-key.nvim`, it automatically pops
-up when you hit your leader key.
+up when you hit your leader key. The only dependency we're using is `render-markdown`,
+to beautify our checkboxes. 
 
 ### Wrapping up
 
