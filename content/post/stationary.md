@@ -13,7 +13,7 @@ categories = ['Productivity', 'General']
 
 In a world where we use technology all day, I think using physical writing tools
 is really beneficial. I wake up every morning and write in my journal, about the
-day before. This helps me keep filter the import parts of the previous day in
+day before. This helps me filter the important parts of the previous day in
 my mind, and also is a nice part of my daily routine that helps me stay active.
 In this article, I'll show the physical tools I use in my day to day life.
 Below, I'll provide Amazon links to the products I've purchased.
