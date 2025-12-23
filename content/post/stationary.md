@@ -14,16 +14,16 @@ categories = ['Productivity', 'General']
 In a world where we use technology all day, I think using physical writing tools
 is really beneficial. I wake up every morning and write in my journal, about the
 day before. This helps me keep filter the import parts of the previous day in
-my mind, and also is a nice part of my daily routine that helps me say active.
-In this article, I'll show my the physical tools I use in my day to day life.
+my mind, and also is a nice part of my daily routine that helps me stay active.
+In this article, I'll show the physical tools I use in my day to day life.
 Below, I'll provide Amazon links to the products I've purchased.
 
 ### Main Journaling Pen - Aihao X97 0.5mm
 
 ![aihao-pen](https://i.imgur.com/DqTw0Yt.jpeg)
 
-I love this pen. I purchased a 10 pack of these pens around a month ago, and for
-journaling and multipurpose note-taking, and I've enjoyed this ever since. For
+I love this pen. I purchased a 10 pack of these pens around a month ago for
+journaling and multipurpose note-taking, and I've enjoyed them ever since. For
 someone who journals every day, and plans projects on physical paper, it's a
 real pleasure to write on. I chose to get black ink, even though you can get a 
 mixed pack or red only or blue only. The transparent color of the pen makes it
@@ -45,8 +45,8 @@ nib size, so it's a little thicker than the Aihao pen I use for planning and
 journaling. This makes it great for editing notes that I wrote previously. The
 ink dries faster than the Aihao. The only drawback of this pen is really that it
 feels cheap in your hand; chunky but light. Well, that and the slight
-bleeding onto the other side of the pen. This pen feels like if it drops,
-it would shatter into 30 pieces. The amazing writing quality makes up for the cheap
+bleeding onto the other side of the page. This pen feels like if it drops,
+it would shatter into pieces. The amazing writing quality makes up for the cheap
 build quality.
 
 ### Journal - Mnemosyne A5 Notebook
@@ -81,7 +81,7 @@ sleep over losing.
 
 ![pencil-case](https://i.imgur.com/AIEQTm0.jpeg)
 
-I bought this pencil case on a whim, and it's paid off. I'm very happy with it,
+I bought this pencil case on a whim, and it's paid off. I'm very happy with it since
 the quality is really amazing for $20, and it holds pens, pencils, pencil lead,
 and lip balm. To easily access this, you can pull out the drawer style pen
 holder. What stands out is the build quality; not sure if this is real leather
