@@ -172,7 +172,7 @@ link or images are generated, it is added into the buffer with indentation and c
 
 ### Dependencies and what they can do for you
 
-The best part about the neovim community is that you'll never have to reinvent
+The best part about the Neovim community is that you'll never have to reinvent
 the wheel. I use a plugin called [render_markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) to 
 display the Markdown elements (links, tables, image links) within Neovim. This way,
 once `md_helper.nvim` creates the table, `render_markdown.nvim` makes it visually
