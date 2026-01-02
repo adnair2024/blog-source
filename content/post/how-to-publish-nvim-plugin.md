@@ -140,6 +140,7 @@ end
         cursor is sitting.
 
 ```lua
+-- FUNCTION: URL Wrapper
 M.create_link = function()
     vim.ui.input({ prompt = "Display Text: " }, function(text)
         if not text then return end
@@ -168,7 +169,17 @@ You may notice that we use a function called `insert_text`. This wraps the
 `vim.api.nvim_put` function because it allows for more precise control over 
 cursor placement and for undo-history compared to the usual "append" commands with
 respect to the current line state and indentation. This ensures that when a 
-link or images are generated, it is added into the buffer with indentation and current line state kept in mind.
+link or images are generated, it is added into the buffer with indentation and 
+current line state kept in mind. Below, I've added the `insert_text` function so
+you can understand how it works
+
+```lua
+local function insert_text(text)
+    local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+    -- row is 1-indexed for the cursor, but 0-indexed for the buffer API
+    vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, {text})
+end
+```
 
 ### Dependencies and what they can do for you
 
