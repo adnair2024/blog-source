@@ -114,7 +114,7 @@ Your live blog will be accessible at `https://adnair2024.github.io/blog/`.
 
 ## Future Enhancements
 
-*   Investigate and resolve Safari rendering issues.
-*   Find a method to customize scrollbars without breaking dark mode.
-*   Add more detailed styling and custom components.
-*   Expand content with more posts and slides.
+- [x] Investigate and resolve Safari rendering issues.
+- [-] Find a method to customize scrollbars without breaking dark mode.
+- [ ] Add more detailed styling and custom components.
+- [-] Expand content with more posts and slides.
