@@ -3,7 +3,7 @@ date = '2026-02-12T18:04:06-06:00'
 draft = false
 title = 'Pokemon Tinkering'
 type = 'post'
-tags = ['coding','pokemon',tinkering]
+tags = ['coding','pokemon','tinkering']
 categories = ['Fun', 'Tech', 'Hobby', 'Coding']
 +++
 
