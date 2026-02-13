@@ -7,7 +7,7 @@ tags = ['coding','pokemon','tinkering']
 categories = ['Fun', 'Tech', 'Hobby', 'Coding']
 +++
 
-# Shiny Patcher: A Deep Dive into ROM Manipulation and Pattern Matching
+# Shiny Patcher: A Deep Dive into ROM Manipulation and Pattern Matching!
 
 ![test](https://i.imgur.com/aTfXeSH.png)
 
