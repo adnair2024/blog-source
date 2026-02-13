@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>General on Ash&#39;s Blog</title>
-    <link>http://localhost:1313/blog/categories/general.html</link>
-    <description>Recent content in General on Ash&#39;s Blog</description>
+    <title>Notes on Ash&#39;s Blog</title>
+    <link>http://localhost:1313/blog/tags/notes.html</link>
+    <description>Recent content in Notes on Ash&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 22 Dec 2025 11:08:13 -0600</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/categories/general/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Stationary Wrap Up - 2025</title>
       <link>http://localhost:1313/blog/post/stationary.html</link>
@@ -16,11 +16,11 @@
       <description>Physical Stationary That Brings Me Daily Enjoyment In a world where we use technology all day, I think using physical writing tools is really beneficial. I wake up every morning and write in my journal, about the day before. This helps me filter the important parts of the previous day in my mind, and also is a nice part of my daily routine that helps me stay active. In this article, I&amp;rsquo;ll show the physical tools I use in my day to day life.</description>
     </item>
     <item>
-      <title>the beginning.</title>
-      <link>http://localhost:1313/blog/post/my-first-post.html</link>
-      <pubDate>Sat, 20 Dec 2025 11:56:44 -0600</pubDate>
-      <guid>http://localhost:1313/blog/post/my-first-post.html</guid>
-      <description>This is my first post. I&amp;rsquo;ve been trying to make a public blog on GH pages for such a long time, and I never got around to doing it. Now, I can finally say &amp;ldquo;ha check my blog&amp;rdquo;, and mean it.&#xA;I&amp;rsquo;m currently using Hugo as the brain for my blog, and a theme called hugo-brewm. It looks really nice, and I had Gemini replicate the demo layout because I found it really pretty.</description>
+      <title>my-markdown</title>
+      <link>http://localhost:1313/blog/post/my-markdown.html</link>
+      <pubDate>Sun, 21 Dec 2025 07:56:44 -0600</pubDate>
+      <guid>http://localhost:1313/blog/post/my-markdown.html</guid>
+      <description>My relationship with markdown I use markdown every single day. It&amp;rsquo;s become an essential part of my workflow, and this started with note taking apps like Obsidian and Ulysses. When I found Neovim, everything changed. I started just making todo lists in markdown, within Neovim, and since all my notes were .md files, it was a really easy and natural way to organize my thoughts and things I had to do without switching context.</description>
     </item>
   </channel>
 </rss>
