@@ -24,6 +24,7 @@ jobs:
         run: hugo --minify --baseURL "https://adnair2024.github.io/blog/"
 
       - name: Deploy to adnair2024.github.io/blog/
+        # Using personal_token for external repository deployment (with workflow scope)
         uses: peaceiris/actions-gh-pages@v4
         with:
           personal_token: ${{ secrets.GH_PAGES_DEPLOY }} # Use the deploy token
