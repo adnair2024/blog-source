@@ -15,10 +15,14 @@ jobs:
           submodules: true  # Fetch Hugo themes
           fetch-depth: 0     # Fetch all history for .GitInfo and lastmod
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+      - name: Deploy to adnair2024.github.io/blog/
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          hugo-version: 'latest'
+          personal_token: ${{ secrets.GH_PAT }}
+          external_repository: adnair2024/adnair2024.github.io
+          publish_branch: main
+          publish_dir: ./public
+          destination_dir: blog
 
       - name: Build Hugo site
         run: hugo --minify --baseURL "https://adnair2024.github.io/blog/"
