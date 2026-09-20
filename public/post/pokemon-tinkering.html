@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+    <!-- head.html --><!-- meta.html -->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokemon Tinkering | Ash&#39;s Blog</title>
+<meta name="author" content="">
+<meta name="description" content="Shiny Patcher: A Deep Dive into ROM Manipulation and Pattern Matching! Building a tool to modify legacy games requires more than just changing a few …" >
+<meta name="keywords" content="coding,pokemon,tinkering">
+<link rel="canonical" href="http://localhost:1313/blog/post/pokemon-tinkering.html">
+
+
+
+    <!-- js.html -->
+
+
+    <script src="http://localhost:1313/blog/js/hugo-brewm.min.js" defer></script><!-- css.html -->
+
+
+    <link rel="stylesheet" href="http://localhost:1313/blog/css/hugo-brewm.min.css">
+
+
+<style>
+::-webkit-scrollbar-thumb {
+    background: transparent !important;
+}
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+</style>
+
+    
+    <!-- css/inline.html -->
+    <style>
+         
+        body {max-width: 786px; margin: auto; padding: 2rem;}
+        img {max-width: 86vw;}
+    </style>
+    
+</head>
+<body>
+    <!-- header.html -->
+<header class="pagewidth">
+    <div id="background-header" class="background" aria-hidden="true"></div>
+    
+    <nav aria-label="Bypass">
+        <a id="to-content" href="#content" aria-label="Skip to Main Content">
+            <span>Skip to Main Content</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+            <span class="screening" aria-hidden="true"></span>
+        </a>
+    </nav>
+    
+    <!-- logo.html -->
+    
+    <details class="presentation" id="top-nav">
+        <summary class="on-deck">
+            <span class="t">Navigation</span>
+            <span class="menu-icon" role="presentation"></span>
+        </summary>
+        <nav tabindex="-1" aria-label="Top">
+            <!-- menu.html -->
+    <details id="has-main-menu" class="presentation" open>
+        <summary  class="hide"  aria-label="Main Menu">
+            <span>Main Menu</span>
+        </summary>
+            
+            <nav id="main-menu" aria-label="Main Menu">
+                <ul class="l1   has-childfree " role="presentation" tabindex="-1" >
+                    
+    
+        <li role="presentation" >
+    <a   class=on-deck href=http://localhost:1313/blog/>
+        
+            <span>
+                Home</span>
+    </a>
+        </li>
+        <li role="presentation" >
+    <a   class=on-deck href=http://localhost:1313/blog/post/>
+        
+            <span>
+                Posts</span>
+    </a>
+        </li>
+        <li role="presentation" >
+    <a   class=on-deck href=http://localhost:1313/blog/tags/>
+        
+            <span>
+                Tags</span>
+    </a>
+        </li>
+                </ul>
+            </nav>
+    </details>
+            
+            <!-- menu.html -->
+            <!-- i18n.html -->
+
+        </nav>
+        <div id="top-nav-screen" class="screening js-cpn" role="presentation" aria-hidden="true"></div>
+        <hr class="hide"/>
+    </details>
+</header>
+    
+    <!-- [main] baseof.html -->
+    <main id="page"class="post"
+        >
+        <!-- main/header.html -->
+        <header class="pagewidth">
+                    <menu id="menu" class="srm"
+                        data-i18n-back="Go Back"
+                        data-i18n-print="Print"
+                        data-i18n-copy="Copy URL"
+                        data-i18n-copying="Copying...">
+                            <li>
+                                <a id="navigatorShare" href="#mastodon" role="button" aria-label="Share">
+                                    <span class="t srt" role="tooltip">Share</span>
+                                </a>
+                            </li>
+                    </menu>
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-breadcrumb" open>
+    <summary id="breadcrumb" tabindex="-1">
+        <span>Breadcrumb</span>
+    </summary>
+        <nav aria-labelledby="breadcrumb">
+            <ul role="presentation" class="breadcrumb ">
+                    <!-- breadcrumb.html -->
+        <li>
+            <a href="http://localhost:1313/blog/post/index.html" aria-current="true">Posts
+            </a>
+        </li>
+    <li>
+        <a href="" aria-current="page" tabindex="-1">Pokemon Tinkering
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+            <hr class="hide"/>
+        </header>
+        <div id="top" role="presentation">
+            
+        </div>
+        
+    <article id="main-article" class="pagewidth rm"
+        role="document" aria-labelledby="title"
+            data-pagefind-body>
+        <header aria-labelledby="title">
+            <!-- title.html -->
+        <h1 id="title"
+                data-pagefind-meta="title"
+            data-bionRead-safe
+            >Pokemon Tinkering</h1>
+            <div id="doc-author" class="textsw">
+            </div>
+            <!-- timestamp.html-->
+        <time datetime="2026-02-12T18:04:06-06:00">February 12, 2026</time>
+        </header>
+        <!-- audio.html -->
+        <section id="content" class="content " aria-labelledby="title" data-bionRead-safe>
+                <h1 id="shiny-patcher-a-deep-dive-into-rom-manipulation-and-pattern-matching">Shiny Patcher: A Deep Dive into ROM Manipulation and Pattern Matching!</h1>
+<p><img src="https://i.imgur.com/aTfXeSH.png" alt="test"></p>
+<p>Building a tool to modify legacy games requires more than just changing a few bytes; it is a delicate dance of reverse engineering, memory management, and robust pattern matching. The Shiny Patcher project is a Flask-based utility designed to give players control over their Pokémon experience—specifically targeting Gen 3 (GBA) and Gen 4 (NDS) titles—by allowing custom shiny rates and event flag toggling.</p>
+<p>Here is the technical breakdown of how we solved the most complex hurdles during development.</p>
+<hr>
+<h2 id="project-overview">Project Overview</h2>
+<p>Shiny Patcher operates as a web-based bridge between raw ROM data and user-friendly toggles.</p>
+<ul>
+<li><strong>Backend:</strong> Python with Flask for the web server.</li>
+<li><strong>ROM Handling:</strong> ndspy for Nintendo DS file system manipulation and standard byte manipulation for GBA.</li>
+<li><strong>Frontend:</strong> A modern, reactive interface built with Tailwind CSS, featuring a persistent Soft Reset (SR) counter stored in localStorage.</li>
+</ul>
+<hr>
+<h2 id="technical-challenges-and-solutions">Technical Challenges and Solutions</h2>
+<h3 id="1-eliminating-false-positives-in-gba-event-flags">1. Eliminating False Positives in GBA Event Flags</h3>
+<p>One of the earliest hurdles was &ldquo;ghost&rdquo; events. In Pokémon FireRed, the scanner initially reported that the Aurora Ticket and Birth Island events were active on vanilla (unmodified) ROMs.</p>
+<p><strong>The Fix:</strong> We realized the scanner was simply checking if a byte was non-zero. Since vanilla ROMs often contain junk data or different metadata at those offsets, we moved to strict validation. The patcher now specifically looks for <code>0x01</code>—the exact byte our tool writes—to confirm a flag is active.</p>
+<h3 id="2-solving-the-regex-parenthesis-trap-nds">2. Solving the &ldquo;Regex Parenthesis&rdquo; Trap (NDS)</h3>
+<p>When searching for assembly patterns in NDS arm9.bin files, we encountered a frustrating <code>re.error: missing )</code>.</p>
+<p><strong>The Cause:</strong> In ARM assembly, the byte <code>0x28</code> represents a <code>CMP</code> instruction. However, in Regex, <code>0x28</code> is the ASCII code for <code>(</code>, which starts a capture group.</p>
+<p><strong>The Solution:</strong> We implemented escaped byte patterns and enabled <code>re.DOTALL</code> to ensure the binary data was handled as a single string of bytes.</p>
+<h3 id="3-performance-optimization-for-hgss">3. Performance Optimization for HGSS</h3>
+<p>Nintendo DS ROMs (specifically HeartGold and SoulSilver) are significantly larger and more complex than GBA files. Initial versions of the patcher would hang because ndspy was decompressing and recompressing the arm9.bin file multiple times in a single request.</p>
+<p><strong>The Refactor:</strong></p>
+<ul>
+<li><strong>Single-Pass Processing:</strong> We modified the logic to load the ROM into memory once, perform all scans and patches, and then save the final state.</li>
+<li><strong>Compression Management:</strong> By explicitly setting <code>rom.setArm9Compression(True)</code>, we prevented the output files from bloating to massive, unplayable sizes.</li>
+</ul>
+<hr>
+<h2 id="technical-specifications">Technical Specifications</h2>
+<h3 id="gba-firered-bpre-v10">GBA FireRed (BPRE v1.0)</h3>
+<p>The GBA implementation relies on &ldquo;Spec-First&rdquo; detection. Rather than searching the whole ROM, we check the most reliable offsets first to ensure speed and accuracy.</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Feature</th>
+					<th style="text-align: left">Specification</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>Shiny Offset</strong></td>
+					<td style="text-align: left">0x39D5A (Primary), 0x39D5E (Secondary)</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Assembly Pattern</strong></td>
+					<td style="text-align: left">XX 28 01 D2 (CMP R0, #XX; BHI)</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Event Flags</strong></td>
+					<td style="text-align: left">0x13A (Aurora), 0x8D5 (Birth Island)</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="nintendo-ds-hgss-ipkeipge">Nintendo DS (HGSS IPKE/IPGE)</h3>
+<p>DS patching is more dynamic, requiring a targeted search within the ARM9 binary.</p>
+<ul>
+<li><strong>Search Range:</strong> 0x60000 to 0x85000 within arm9.bin.</li>
+<li><strong>Pattern Matching:</strong> 00 0C XX 28 01 D2.</li>
+<li><strong>Logic:</strong> The code looks for the LSR (Logical Shift Right) instruction, which shifts the internal ID to prepare for the shiny comparison.</li>
+</ul>
+<hr>
+<h2 id="current-project-status">Current Project Status</h2>
+<p>Shiny Patcher is now stable and highly accurate. It prioritizes hardcoded offsets for known versions while maintaining a robust fallback search for minor revisions. The UI remains lightweight, providing a scrolling marquee of supported titles and a persistent counter for hunters who prefer the long way—even if the rates are in their favor.</p>
+<p><strong>What&rsquo;s Next?</strong> Now that the core patching engine is solid, we can focus on expanding the Event Toggle library to include Gen 3 legendary encounters like Mew on Faraway Island.</p>
+
+        </section>
+            <footer>
+                
+    <nav id="keywords" aria-label="Tags">
+        <span>Tags:&nbsp;</span>
+        
+        <!-- terms.html -->
+            <ul class="delimiter" role="presentation">
+                    <li><a href="http://localhost:1313/blog/tags/coding.html" >Coding</a></li>
+                    <li><a href="http://localhost:1313/blog/tags/pokemon.html" >Pokemon</a></li>
+                    <li><a href="http://localhost:1313/blog/tags/tinkering.html" >Tinkering</a></li>
+            </ul>
+    </nav>
+            </footer>
+    </article>
+        <div id="exclude" role="presentation">
+            <!-- excluded last block frome some RSS reader and browser reader mode -->
+            
+    <hr class="hide" style="margin: 1in 0;">
+    <div id="contentinfo" class="pagewidth" role="contentinfo" data-pagefind-ignore="all">
+                <!-- history.html -->
+            
+    </div>
+    
+        
+        <!-- main/footer.html -->
+        </div>
+    </main>
+    <!-- footer.html -->
+<footer id="body-footer" class="pagewidth">
+    <div id="background-footer" class="background hide" role="presentation" aria-hidden="true"></div>
+    <div id="focusMode"></div>
+    <!-- a11y.html --><details id="has-a11y" class="presentation js-details hide" name="on-deck" aria-haspopup="true" aria-labelledby="has-a11y-summary"
+    data-i18n-accessibility="Accessibility"
+    data-i18n-optimizeSR="Screen Reader Optimization"
+    data-i18n-optimizeSRdesc="Optimize display and resources for screen reader users who navigate with a pointer device."
+    data-i18n-colorSettings="Color Settings"
+    data-i18n-darkMode="Dark Mode"
+    data-i18n-light="Light"
+    data-i18n-dark="Dark"
+    data-i18n-contrast="Contrast"
+    data-i18n-lessContrast="Low"
+    data-i18n-moreContrast="High"
+    data-i18n-defaultContrast="Default"
+    data-i18n-colorPalette="Color Palette"
+    data-i18n-defaultColor="Default"
+    data-i18n-deuteranopia="Deuteranopia"
+    data-i18n-protanopia="Protanopia"
+    data-i18n-tritanopia="Tritanopia"
+    data-i18n-monochrome="Monochrome"
+    data-i18n-fontSize="Font Size"
+    data-i18n-baselineStretch="Baseline Stretch"
+    data-i18n-OpenDyslexic="Use OpenDyslexic Font"
+    data-i18n-menuControls="Accessibility Menu Controls"
+    data-i18n-save="Save"
+    data-i18n-reset="Reset"
+    data-i18n-close="Close"
+    data-i18n-bionRead="BionRead Mode"
+    data-i18n-focusMode="Focus Mode"
+    data-i18n-noLocalStorage="LocalStorage is not available in your browser. Settings won&#39;t be saved.">
+</details>
+
+
+    <div id="useBionRead" class="sri"></div>
+    <!-- [top] bypass block -->
+    <nav aria-label="Bypass">
+        <a id="to-top" class="srm" href="#top" title="To Content Top" accesskey="c" aria-keyshortcuts="c" aria-label="To Content Top">
+            <span class="t srt">To Content Top</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+        </a>
+    </nav>
+</footer>
+    
+    <!-- [post] single.html -->
+    <div id="bionReadSnapshot" hidden></div>
+    <!-- [background] baseof.html -->
+    <div id="background-body" role="presentation" aria-hidden="true"></div>
+</body>
+</html>

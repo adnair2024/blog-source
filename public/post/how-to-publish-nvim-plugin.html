@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+    <!-- head.html --><!-- meta.html -->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Publish a Neovim Plugin | Ash&#39;s Blog</title>
+<meta name="author" content="">
+<meta name="description" content="Turning snippets into plugins that everyone can use Table of Contents The Structure of a Neovim Plugin Logic Dependencies and what they can do for you …" >
+<meta name="keywords" content="neovim,coding,markdown,plugins">
+<link rel="canonical" href="http://localhost:1313/blog/post/how-to-publish-nvim-plugin.html">
+
+
+
+    <!-- js.html -->
+
+
+    <script src="http://localhost:1313/blog/js/hugo-brewm.min.js" defer></script><!-- css.html -->
+
+
+    <link rel="stylesheet" href="http://localhost:1313/blog/css/hugo-brewm.min.css">
+
+
+<style>
+::-webkit-scrollbar-thumb {
+    background: transparent !important;
+}
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+</style>
+
+    
+    <!-- css/inline.html -->
+    <style>
+         
+        body {max-width: 786px; margin: auto; padding: 2rem;}
+        img {max-width: 86vw;}
+    </style>
+    
+</head>
+<body>
+    <!-- header.html -->
+<header class="pagewidth">
+    <div id="background-header" class="background" aria-hidden="true"></div>
+    
+    <nav aria-label="Bypass">
+        <a id="to-content" href="#content" aria-label="Skip to Main Content">
+            <span>Skip to Main Content</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+            <span class="screening" aria-hidden="true"></span>
+        </a>
+    </nav>
+    
+    <!-- logo.html -->
+    
+    <details class="presentation" id="top-nav">
+        <summary class="on-deck">
+            <span class="t">Navigation</span>
+            <span class="menu-icon" role="presentation"></span>
+        </summary>
+        <nav tabindex="-1" aria-label="Top">
+            <!-- menu.html -->
+    <details id="has-main-menu" class="presentation" open>
+        <summary  class="hide"  aria-label="Main Menu">
+            <span>Main Menu</span>
+        </summary>
+            
+            <nav id="main-menu" aria-label="Main Menu">
+                <ul class="l1   has-childfree " role="presentation" tabindex="-1" >
+                    
+    
+        <li role="presentation" >
+    <a   class=on-deck href=http://localhost:1313/blog/>
+        
+            <span>
+                Home</span>
+    </a>
+        </li>
+        <li role="presentation" >
+    <a   class=on-deck href=http://localhost:1313/blog/post/>
+        
+            <span>
+                Posts</span>
+    </a>
+        </li>
+        <li role="presentation" >
+    <a   class=on-deck href=http://localhost:1313/blog/tags/>
+        
+            <span>
+                Tags</span>
+    </a>
+        </li>
+                </ul>
+            </nav>
+    </details>
+            
+            <!-- menu.html -->
+            <!-- i18n.html -->
+
+        </nav>
+        <div id="top-nav-screen" class="screening js-cpn" role="presentation" aria-hidden="true"></div>
+        <hr class="hide"/>
+    </details>
+</header>
+    
+    <!-- [main] baseof.html -->
+    <main id="page"class="post"
+        >
+        <!-- main/header.html -->
+        <header class="pagewidth">
+                    <menu id="menu" class="srm"
+                        data-i18n-back="Go Back"
+                        data-i18n-print="Print"
+                        data-i18n-copy="Copy URL"
+                        data-i18n-copying="Copying...">
+                            <li>
+                                <a id="navigatorShare" href="#mastodon" role="button" aria-label="Share">
+                                    <span class="t srt" role="tooltip">Share</span>
+                                </a>
+                            </li>
+                    </menu>
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-breadcrumb" open>
+    <summary id="breadcrumb" tabindex="-1">
+        <span>Breadcrumb</span>
+    </summary>
+        <nav aria-labelledby="breadcrumb">
+            <ul role="presentation" class="breadcrumb ">
+                    <!-- breadcrumb.html -->
+        <li>
+            <a href="http://localhost:1313/blog/post/index.html" aria-current="true">Posts
+            </a>
+        </li>
+    <li>
+        <a href="" aria-current="page" tabindex="-1">How to Publish a Neovim Plugin
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+            <hr class="hide"/>
+        </header>
+        <div id="top" role="presentation">
+            
+        </div>
+        
+    <article id="main-article" class="pagewidth rm"
+        role="document" aria-labelledby="title"
+            data-pagefind-body>
+        <header aria-labelledby="title">
+            <!-- title.html -->
+        <h1 id="title"
+                data-pagefind-meta="title"
+            data-bionRead-safe
+            >How to Publish a Neovim Plugin</h1>
+            <div id="doc-author" class="textsw">
+            </div>
+            <!-- timestamp.html-->
+        <time datetime="2025-12-29T10:51:04-06:00">December 29, 2025</time>
+        </header>
+        <!-- audio.html -->
+        <section id="content" class="content " aria-labelledby="title" data-bionRead-safe>
+                <h2 id="turning-snippets-into-plugins-that-everyone-can-use">Turning snippets into plugins that everyone can use</h2>
+<ul>
+<li><a href="#turning-snippets-into-plugins-that-everyone-can-use">Table of Contents</a>
+<ul>
+<li><a href="#the-structure-of-a-neovim-plugin">The Structure of a Neovim Plugin</a></li>
+<li><a href="#logic">Logic</a></li>
+<li><a href="#dependencies-and-what-they-can-do-for-you">Dependencies and what they can do for you</a></li>
+<li><a href="#publishing-and-usage">Publishing and Usage</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+<p>Every Neovim power-user reaches a point when their <code>init.lua</code> becomes a mess of
+old code snippets. Since I use Markdown files every day for notes, planning and
+general writing, my breaking point was functions for Markdown formatting.
+I was tired of manually aligning Markdown tables and manually creating
+a Table of Contents for each file, along with streamlining embedding of
+hyperlinks and images. I decided to extract that logic into a
+dedicated plugin: <a href="https://github.com/adnair2024/md-helper.nvim" target="_blank" rel="external noopener noreferrer nofollow">md-helper.nvim</a>.</p>
+<p>If you&rsquo;ve ever wanted to publish your own plugin for Neovim, I&rsquo;ll be using my
+plugin as a case study for the logic and structure required for smoothly deploying
+a plugin to GitHub.</p>
+<h3 id="the-structure-of-a-neovim-plugin">The Structure of a Neovim Plugin</h3>
+<p>A plugin is a directory on GitHub that Neovim knows how to look into and search.
+The most important part is the <code>lua/</code> directory. When you create this folder and
+add a directory for your plugin like <code>lua/md-helper</code>, users can access the md-helper
+plugin anywhere in Neovim by calling <code>require (&quot;md-helper&quot;)</code>. I named my GitHub
+repository <code>md-helper.nvim</code> for discovery purposes, while leaving the internal
+module name as <code>md-helper</code>.</p>
+<h3 id="logic">Logic</h3>
+<p>When building a Neovim plugin, thinking in terms of the buffer is important. Here
+is the logic behind the core of the plugin:</p>
+<ul>
+<li>The Table of Contents - <code>(generate_toc)</code>
+<ul>
+<li>Aim: Scan a file and create clickable nested links to the Markdown
+headers found within it.</li>
+<li>Logic: The function scans every line of the selected buffer, and counts
+the number of <code>#</code> symbols to determine the depth (e.g. <code>###</code> is a level
+3 header).</li>
+<li>Link: To make the items clickable, the text &ldquo;My Header&rdquo; must become
+<code>(#my_header)</code>. My code handles this &ldquo;slugification&rdquo; by converting the
+string to lowercase, stripping special characters, and replacing spaces
+with hyphens to match standard Markdown parsers.</li>
+</ul>
+</li>
+</ul>
+<p>Below the following code block, I&rsquo;ll supply a screenshot of the output of the
+<code>generate_toc</code> command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>M.generate_toc <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">local</span> lines <span style="color:#f92672">=</span> vim.api.nvim_buf_get_lines(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#66d9ef">false</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">local</span> toc <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#34;## Table of Contents&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span> }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">local</span> found_header <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> _, line <span style="color:#66d9ef">in</span> ipairs(lines) <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- Match lines starting with 1 to 6 &#39;#&#39; characters</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">local</span> level, title <span style="color:#f92672">=</span> line:match(<span style="color:#e6db74">&#34;^(#+)%s+(.*)$&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> level <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            found_header <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">local</span> depth <span style="color:#f92672">=</span> <span style="color:#f92672">#</span>level
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- Ignore the TOC header itself if it already exists</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> title <span style="color:#f92672">~=</span> <span style="color:#e6db74">&#34;Table of Contents&#34;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">-- Strip markdown links from title: [Name](URL) -&gt; Name</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">local</span> clean_title <span style="color:#f92672">=</span> title:gsub(<span style="color:#e6db74">&#34;%[([^%]]+)%]%s*%b()&#34;</span>, <span style="color:#e6db74">&#34;%1&#34;</span>)
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">-- Convert clean title to a slug (e.g., &#34;My Heading&#34; -&gt; &#34;my-heading&#34;)</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">local</span> slug <span style="color:#f92672">=</span> clean_title:lower():gsub(<span style="color:#e6db74">&#34;%s+&#34;</span>, <span style="color:#e6db74">&#34;-&#34;</span>):gsub(<span style="color:#e6db74">&#34;[^%w%-]&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">-- Indent based on heading level (2 spaces per level)</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">local</span> indent <span style="color:#f92672">=</span> string.rep(<span style="color:#e6db74">&#34;  &#34;</span>, depth <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>                table.insert(toc, string.format(<span style="color:#e6db74">&#34;%s* [%s](#%s)&#34;</span>, indent, clean_title, slug))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> found_header <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;No headers found to create a TOC!&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- Insert the TOC at the current cursor position</span>
+</span></span><span style="display:flex;"><span>    vim.api.nvim_put(toc, <span style="color:#e6db74">&#34;l&#34;</span>, <span style="color:#66d9ef">true</span>, <span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Output:</p>
+<ul>
+<li>
+<p><img src="https://i.imgur.com/gVBqDBJ.png" alt="output-toc"></p>
+</li>
+<li>
+<p>Dynamic Table Creation</p>
+<ul>
+<li>Aim: Eliminate the need to manually align pipes to create a markdown table.</li>
+<li>Logic: I used <code>vim.ui.input</code> to ask the user for &ldquo;Rows&rdquo; and &ldquo;Columns&rdquo;. The
+plugin then creates a string grid with the specified number of pipes and
+separators. Then it uses <code>vim.api.nvim_put</code> to insert the text block
+containing the table where your cursor is located.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>M.create_table <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+</span></span><span style="display:flex;"><span>    vim.ui.input({ prompt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Number of Rows: &#34;</span> }, <span style="color:#66d9ef">function</span>(rows)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> rows <span style="color:#f92672">or</span> rows <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>        vim.ui.input({ prompt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Number of Columns: &#34;</span> }, <span style="color:#66d9ef">function</span>(cols)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> cols <span style="color:#f92672">or</span> cols <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">local</span> r, c <span style="color:#f92672">=</span> tonumber(rows), tonumber(cols)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> r <span style="color:#f92672">or</span> <span style="color:#f92672">not</span> c <span style="color:#66d9ef">then</span> 
+</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">&#34;Error: Rows and Columns must be numbers&#34;</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">local</span> lines <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- Build Header: |   |   |</span>
+</span></span><span style="display:flex;"><span>            table.insert(lines, <span style="color:#e6db74">&#34;| &#34;</span> <span style="color:#f92672">..</span> string.rep(<span style="color:#e6db74">&#34;  | &#34;</span>, c))
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- Build Separator: |---|---|</span>
+</span></span><span style="display:flex;"><span>            table.insert(lines, <span style="color:#e6db74">&#34;| &#34;</span> <span style="color:#f92672">..</span> string.rep(<span style="color:#e6db74">&#34;--- | &#34;</span>, c))
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- Build Rows</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, r <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>                table.insert(lines, <span style="color:#e6db74">&#34;| &#34;</span> <span style="color:#f92672">..</span> string.rep(<span style="color:#e6db74">&#34;  | &#34;</span>, c))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            vim.api.nvim_put(lines, <span style="color:#e6db74">&#34;l&#34;</span>, <span style="color:#66d9ef">true</span>, <span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><ul>
+<li>Image and Link Wrappers
+<ul>
+<li>Aim: Reduce time taken to create an image embed or hyperlink.</li>
+<li>Logic: These wrappers use Lua&rsquo;s built-in string formatting to take two
+inputs (like description and URL) and drop the text block where your
+cursor is sitting.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#75715e">-- FUNCTION: URL Wrapper</span>
+</span></span><span style="display:flex;"><span>M.create_link <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+</span></span><span style="display:flex;"><span>    vim.ui.input({ prompt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Display Text: &#34;</span> }, <span style="color:#66d9ef">function</span>(text)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> text <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>        vim.ui.input({ prompt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;URL: &#34;</span> }, <span style="color:#66d9ef">function</span>(url)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> url <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>                insert_text(string.format(<span style="color:#e6db74">&#34;[%s](%s)&#34;</span>, text, url))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- FUNCTION: Image Wrapper</span>
+</span></span><span style="display:flex;"><span>M.create_image <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+</span></span><span style="display:flex;"><span>    vim.ui.input({ prompt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Alt Description: &#34;</span> }, <span style="color:#66d9ef">function</span>(alt)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> alt <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>        vim.ui.input({ prompt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Image URL/Path: &#34;</span> }, <span style="color:#66d9ef">function</span>(path)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> path <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>                insert_text(string.format(<span style="color:#e6db74">&#34;![%s](%s)&#34;</span>, alt, path))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>You may notice that we use a function called <code>insert_text</code>. This wraps the
+<code>vim.api.nvim_put</code> function because it allows for more precise control over
+cursor placement and for undo-history compared to the usual &ldquo;append&rdquo; commands with
+respect to the current line state and indentation. This ensures that when a
+link or images are generated, it is added into the buffer with indentation and
+current line state kept in mind. Below, I&rsquo;ve added the <code>insert_text</code> function so
+you can understand how it works</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">local</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">insert_text</span>(text)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">local</span> row, col <span style="color:#f92672">=</span> unpack(vim.api.nvim_win_get_cursor(<span style="color:#ae81ff">0</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- row is 1-indexed for the cursor, but 0-indexed for the buffer API</span>
+</span></span><span style="display:flex;"><span>    vim.api.nvim_buf_set_text(<span style="color:#ae81ff">0</span>, row <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, col, row <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, col, {text})
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><h3 id="dependencies-and-what-they-can-do-for-you">Dependencies and what they can do for you</h3>
+<p>The best part about the Neovim community is that you&rsquo;ll never have to reinvent
+the wheel. I use a plugin called <a href="https://github.com/MeanderingProgrammer/render-markdown.nvim" target="_blank" rel="external noopener noreferrer nofollow">render_markdown.nvim</a> to
+display the Markdown elements (links, tables, image links) within Neovim. This way,
+once <code>md_helper.nvim</code> creates the table, <code>render_markdown.nvim</code> makes it visually
+appealing. This is why I think it&rsquo;s a great plugin to have as a dependency for
+<code>md_helper.nvim</code>. Below I&rsquo;ll add screenshots of markdown tables with and without the
+dependency plugin:</p>
+<p><img src="https://i.imgur.com/KjvPIwr.png" alt="without"><img src="https://i.imgur.com/VqHsjhk.png" alt="with"></p>
+<ul>
+<li><em>The first image shows the raw markdown table, and the second one shows the
+markdown table rendered with <code>render_markdown.nvim</code>.</em></li>
+</ul>
+<h3 id="publishing-and-usage">Publishing and Usage</h3>
+<p>Once I tested it locally, I proceeded to push my code to GitHub. To make my project
+more professional, I added a detailed README.md that included a configuration
+block for <code>Lazy.nvim</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;adnair2024/md-helper.nvim&#34;</span>,
+</span></span><span style="display:flex;"><span>    dependencies <span style="color:#f92672">=</span> { 
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;MeanderingProgrammer/render-markdown.nvim&#34;</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    ft <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#34;markdown&#34;</span> }, <span style="color:#75715e">-- Load only on markdown files</span>
+</span></span><span style="display:flex;"><span>    config <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">local</span> md_helper <span style="color:#f92672">=</span> require(<span style="color:#e6db74">&#34;md-helper&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- Recommended Keybindings</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- You can customize these keys to whatever fits your workflow</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- Generate Table of Contents</span>
+</span></span><span style="display:flex;"><span>        vim.keymap.set(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;mc&#34;</span>, md_helper.generate_toc, { desc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Markdown: Create TOC&#34;</span> })
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- Create Table (Prompts for Rows x Cols)</span>
+</span></span><span style="display:flex;"><span>        vim.keymap.set(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;mt&#34;</span>, md_helper.create_table, { desc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Markdown: Table&#34;</span> })
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- Insert Link (Prompts for Text &amp; URL)</span>
+</span></span><span style="display:flex;"><span>        vim.keymap.set(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;ml&#34;</span>, md_helper.create_link, { desc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Markdown: Link&#34;</span> })
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- Insert Image (Prompts for Alt Text &amp; Path)</span>
+</span></span><span style="display:flex;"><span>        vim.keymap.set(<span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;&lt;leader&gt;mi&#34;</span>, md_helper.create_image, { desc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Markdown: Image&#34;</span> })
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>I also made sure to add instructions in the README.md on how to set up whichkey
+keybinds, in case someone uses them, as I do. Now that it&rsquo;s on GitHub and Lazy.nvim
+automatically pulls from GitHub, we are ready to go. Anyone who uses a Lazy.nvim
+<code>init.lua</code> can use my plugin directly in Neovim, by calling <code>adnair2024/md-helper.nvim</code>.
+It&rsquo;s also important to note that the folder structure is strict, and should be
+the following, since Neovim always looks into the <code>lua/</code> folder located into the
+root directory of your repository.</p>
+<pre tabindex="0"><code>|- md-helper.nvim/
+    |-   lua/
+        |- md-helper/
+            |-   init.lua - All functions stored here
+    |-   README.md
+</code></pre><h3 id="conclusion">Conclusion</h3>
+<p>Publishing <code>md-helper.nvim</code> taught me how simple and lightweight it is to develop
+plugins for Neovim. You just need a tool that solves a specific problem for you
+and by publishing it as a plugin to GitHub, you can help others who have this
+problem as well. By following the <code>lua/</code> directory standard and also adding
+in existing dependencies, you can build something simple that feels like a native
+Neovim feature and not an external plugin.</p>
+
+        </section>
+            <footer>
+                
+    <nav id="keywords" aria-label="Tags">
+        <span>Tags:&nbsp;</span>
+        
+        <!-- terms.html -->
+            <ul class="delimiter" role="presentation">
+                    <li><a href="http://localhost:1313/blog/tags/neovim.html" >Neovim</a></li>
+                    <li><a href="http://localhost:1313/blog/tags/coding.html" >Coding</a></li>
+                    <li><a href="http://localhost:1313/blog/tags/markdown.html" >Markdown</a></li>
+                    <li><a href="http://localhost:1313/blog/tags/plugins.html" >Plugins</a></li>
+            </ul>
+    </nav>
+            </footer>
+    </article>
+        <div id="exclude" role="presentation">
+            <!-- excluded last block frome some RSS reader and browser reader mode -->
+            
+    <hr class="hide" style="margin: 1in 0;">
+    <div id="contentinfo" class="pagewidth" role="contentinfo" data-pagefind-ignore="all">
+                <!-- history.html -->
+            
+    </div>
+    
+        
+        <!-- main/footer.html -->
+        </div>
+    </main>
+    <!-- footer.html -->
+<footer id="body-footer" class="pagewidth">
+    <div id="background-footer" class="background hide" role="presentation" aria-hidden="true"></div>
+    <div id="focusMode"></div>
+    <!-- a11y.html --><details id="has-a11y" class="presentation js-details hide" name="on-deck" aria-haspopup="true" aria-labelledby="has-a11y-summary"
+    data-i18n-accessibility="Accessibility"
+    data-i18n-optimizeSR="Screen Reader Optimization"
+    data-i18n-optimizeSRdesc="Optimize display and resources for screen reader users who navigate with a pointer device."
+    data-i18n-colorSettings="Color Settings"
+    data-i18n-darkMode="Dark Mode"
+    data-i18n-light="Light"
+    data-i18n-dark="Dark"
+    data-i18n-contrast="Contrast"
+    data-i18n-lessContrast="Low"
+    data-i18n-moreContrast="High"
+    data-i18n-defaultContrast="Default"
+    data-i18n-colorPalette="Color Palette"
+    data-i18n-defaultColor="Default"
+    data-i18n-deuteranopia="Deuteranopia"
+    data-i18n-protanopia="Protanopia"
+    data-i18n-tritanopia="Tritanopia"
+    data-i18n-monochrome="Monochrome"
+    data-i18n-fontSize="Font Size"
+    data-i18n-baselineStretch="Baseline Stretch"
+    data-i18n-OpenDyslexic="Use OpenDyslexic Font"
+    data-i18n-menuControls="Accessibility Menu Controls"
+    data-i18n-save="Save"
+    data-i18n-reset="Reset"
+    data-i18n-close="Close"
+    data-i18n-bionRead="BionRead Mode"
+    data-i18n-focusMode="Focus Mode"
+    data-i18n-noLocalStorage="LocalStorage is not available in your browser. Settings won&#39;t be saved.">
+</details>
+
+
+    <div id="useBionRead" class="sri"></div>
+    <!-- [top] bypass block -->
+    <nav aria-label="Bypass">
+        <a id="to-top" class="srm" href="#top" title="To Content Top" accesskey="c" aria-keyshortcuts="c" aria-label="To Content Top">
+            <span class="t srt">To Content Top</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+        </a>
+    </nav>
+</footer>
+    
+    <!-- [post] single.html -->
+    <div id="bionReadSnapshot" hidden></div>
+    <!-- [background] baseof.html -->
+    <div id="background-body" role="presentation" aria-hidden="true"></div>
+</body>
+</html>

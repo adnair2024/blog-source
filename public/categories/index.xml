@@ -1,19 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
   <channel>
     <title>Categories on Ash&#39;s Blog</title>
-    <link>http://localhost:1313/blog/categories.html</link>
-    <description>Recent content in Categories on Ash&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <link>http://localhost:1313/blog/categories/index.html</link>
+    <description>Recent Posts in Categories on Ash&#39;s Blog</description>
+    <generator>Hugo 0.166.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Dec 2025 10:51:04 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 09:30:04 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coding</title>
+      <link>http://localhost:1313/blog/categories/coding.html</link>
+      <pubDate>Thu, 12 Feb 2026 18:04:06 -0600</pubDate>
+      <guid>http://localhost:1313/blog/categories/coding.html</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Fun</title>
+      <link>http://localhost:1313/blog/categories/fun.html</link>
+      <pubDate>Thu, 12 Feb 2026 18:04:06 -0600</pubDate>
+      <guid>http://localhost:1313/blog/categories/fun.html</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Hobby</title>
+      <link>http://localhost:1313/blog/categories/hobby.html</link>
+      <pubDate>Thu, 12 Feb 2026 18:04:06 -0600</pubDate>
+      <guid>http://localhost:1313/blog/categories/hobby.html</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>http://localhost:1313/blog/categories/tech.html</link>
+      <pubDate>Thu, 12 Feb 2026 18:04:06 -0600</pubDate>
+      <guid>http://localhost:1313/blog/categories/tech.html</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
     <item>
       <title>Neovim</title>
       <link>http://localhost:1313/blog/categories/neovim.html</link>
       <pubDate>Mon, 29 Dec 2025 10:51:04 -0600</pubDate>
       <guid>http://localhost:1313/blog/categories/neovim.html</guid>
       <description></description>
+      <content:encoded></content:encoded>
     </item>
     <item>
       <title>General</title>
@@ -21,6 +54,7 @@
       <pubDate>Mon, 22 Dec 2025 11:08:13 -0600</pubDate>
       <guid>http://localhost:1313/blog/categories/general.html</guid>
       <description></description>
+      <content:encoded></content:encoded>
     </item>
     <item>
       <title>Productivity</title>
@@ -28,6 +62,7 @@
       <pubDate>Mon, 22 Dec 2025 11:08:13 -0600</pubDate>
       <guid>http://localhost:1313/blog/categories/productivity.html</guid>
       <description></description>
+      <content:encoded></content:encoded>
     </item>
   </channel>
 </rss>
