@@ -2,111 +2,123 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/index.html</loc>
+    <loc>https://adnair2024.github.io/blog/index.html</loc>
+    <lastmod>2026-09-26T10:10:15-05:00</lastmod>
+    </url>
+  <url>
+    <loc>https://adnair2024.github.io/blog/categories/index.html</loc>
+    <lastmod>2026-09-26T10:10:15-05:00</lastmod>
+    </url>
+  <url>
+    <loc>https://adnair2024.github.io/blog/categories/coding.html</loc>
+    <lastmod>2026-09-26T10:10:15-05:00</lastmod>
+    </url>
+  <url>
+    <loc>https://adnair2024.github.io/blog/tags/coding.html</loc>
+    <lastmod>2026-09-26T10:10:15-05:00</lastmod>
+    </url>
+  <url>
+    <loc>https://adnair2024.github.io/blog/tags/lua.html</loc>
+    <lastmod>2026-09-26T10:10:15-05:00</lastmod>
+    </url>
+  <url>
+    <loc>https://adnair2024.github.io/blog/categories/neovim.html</loc>
+    <lastmod>2026-09-26T10:10:15-05:00</lastmod>
+    </url>
+  <url>
+    <loc>https://adnair2024.github.io/blog/tags/neovim.html</loc>
+    <lastmod>2026-09-26T10:10:15-05:00</lastmod>
+    </url>
+  <url>
+    <loc>https://adnair2024.github.io/blog/tags/plugins.html</loc>
+    <lastmod>2026-09-26T10:10:15-05:00</lastmod>
+    </url>
+  <url>
+    <loc>https://adnair2024.github.io/blog/post/index.html</loc>
+    <lastmod>2026-09-26T10:10:15-05:00</lastmod>
+    </url>
+  <url>
+    <loc>https://adnair2024.github.io/blog/tags/productivity.html</loc>
+    <lastmod>2026-09-26T10:10:15-05:00</lastmod>
+    </url>
+  <url>
+    <loc>https://adnair2024.github.io/blog/post/temp-nvim.html</loc>
+    <lastmod>2026-09-26T10:10:15-05:00</lastmod>
+    </url>
+  <url>
+    <loc>https://adnair2024.github.io/blog/tags/index.html</loc>
+    <lastmod>2026-09-26T10:10:15-05:00</lastmod>
+    </url>
+  <url>
+    <loc>https://adnair2024.github.io/blog/categories/tech.html</loc>
+    <lastmod>2026-09-26T10:10:15-05:00</lastmod>
+    </url>
+  <url>
+    <loc>https://adnair2024.github.io/blog/categories/fun.html</loc>
     <lastmod>2026-02-12T18:04:06-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/categories/index.html</loc>
+    <loc>https://adnair2024.github.io/blog/categories/hobby.html</loc>
     <lastmod>2026-02-12T18:04:06-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/categories/coding.html</loc>
+    <loc>https://adnair2024.github.io/blog/tags/pokemon.html</loc>
     <lastmod>2026-02-12T18:04:06-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/tags/coding.html</loc>
+    <loc>https://adnair2024.github.io/blog/post/pokemon-tinkering.html</loc>
     <lastmod>2026-02-12T18:04:06-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/categories/fun.html</loc>
+    <loc>https://adnair2024.github.io/blog/tags/tinkering.html</loc>
     <lastmod>2026-02-12T18:04:06-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/categories/hobby.html</loc>
-    <lastmod>2026-02-12T18:04:06-06:00</lastmod>
-    </url>
-  <url>
-    <loc>http://localhost:1313/blog/tags/pokemon.html</loc>
-    <lastmod>2026-02-12T18:04:06-06:00</lastmod>
-    </url>
-  <url>
-    <loc>http://localhost:1313/blog/post/pokemon-tinkering.html</loc>
-    <lastmod>2026-02-12T18:04:06-06:00</lastmod>
-    </url>
-  <url>
-    <loc>http://localhost:1313/blog/post/index.html</loc>
-    <lastmod>2026-02-12T18:04:06-06:00</lastmod>
-    </url>
-  <url>
-    <loc>http://localhost:1313/blog/tags/index.html</loc>
-    <lastmod>2026-02-12T18:04:06-06:00</lastmod>
-    </url>
-  <url>
-    <loc>http://localhost:1313/blog/categories/tech.html</loc>
-    <lastmod>2026-02-12T18:04:06-06:00</lastmod>
-    </url>
-  <url>
-    <loc>http://localhost:1313/blog/tags/tinkering.html</loc>
-    <lastmod>2026-02-12T18:04:06-06:00</lastmod>
-    </url>
-  <url>
-    <loc>http://localhost:1313/blog/post/how-to-publish-nvim-plugin.html</loc>
+    <loc>https://adnair2024.github.io/blog/post/how-to-publish-nvim-plugin.html</loc>
     <lastmod>2025-12-29T10:51:04-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/tags/markdown.html</loc>
+    <loc>https://adnair2024.github.io/blog/tags/markdown.html</loc>
     <lastmod>2025-12-29T10:51:04-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/categories/neovim.html</loc>
-    <lastmod>2025-12-29T10:51:04-06:00</lastmod>
-    </url>
-  <url>
-    <loc>http://localhost:1313/blog/tags/neovim.html</loc>
-    <lastmod>2025-12-29T10:51:04-06:00</lastmod>
-    </url>
-  <url>
-    <loc>http://localhost:1313/blog/tags/plugins.html</loc>
-    <lastmod>2025-12-29T10:51:04-06:00</lastmod>
-    </url>
-  <url>
-    <loc>http://localhost:1313/blog/categories/general.html</loc>
+    <loc>https://adnair2024.github.io/blog/categories/general.html</loc>
     <lastmod>2025-12-22T11:08:13-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/tags/notes.html</loc>
+    <loc>https://adnair2024.github.io/blog/tags/notes.html</loc>
     <lastmod>2025-12-22T11:08:13-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/categories/productivity.html</loc>
+    <loc>https://adnair2024.github.io/blog/categories/productivity.html</loc>
     <lastmod>2025-12-22T11:08:13-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/post/stationary.html</loc>
+    <loc>https://adnair2024.github.io/blog/post/stationary.html</loc>
     <lastmod>2025-12-22T11:08:13-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/tags/tools.html</loc>
+    <loc>https://adnair2024.github.io/blog/tags/tools.html</loc>
     <lastmod>2025-12-22T11:08:13-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/post/my-markdown.html</loc>
+    <loc>https://adnair2024.github.io/blog/post/my-markdown.html</loc>
     <lastmod>2025-12-21T07:56:44-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/tags/blog.html</loc>
+    <loc>https://adnair2024.github.io/blog/tags/blog.html</loc>
     <lastmod>2025-12-20T11:56:44-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/tags/intro.html</loc>
+    <loc>https://adnair2024.github.io/blog/tags/intro.html</loc>
     <lastmod>2025-12-20T11:56:44-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/tags/tech.html</loc>
+    <loc>https://adnair2024.github.io/blog/tags/tech.html</loc>
     <lastmod>2025-12-20T11:56:44-06:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/blog/post/my-first-post.html</loc>
+    <loc>https://adnair2024.github.io/blog/post/my-first-post.html</loc>
     <lastmod>2025-12-20T11:56:44-06:00</lastmod>
     </url>
 </urlset>
