@@ -11,6 +11,9 @@ categories = ['Neovim']
 
 ## Table of Contents
 
+
+## Table of Contents
+
 * [A quick Neovim Plugin that made writing code and blog articles easier for me](#a-quick-neovim-plugin-that-made-writing-code-and-blog-articles-easier-for-me)
     * [Why I needed temp.nvim](#why-i-needed-tempnvim)
     * [Planning temp.nvim](#planning-tempnvim)
@@ -18,6 +21,8 @@ categories = ['Neovim']
       * [templates.lua - The Template Registry](#templateslua---the-template-registry)
       * [templates.lua - The rendering function](#templateslua---the-rendering-function)
       * [init.lua - Path detection](#initlua---path-detection)
+      * [init.lua - Input handling](#initlua---input-handling)
+      * [init.lua - User command setup](#initlua---user-command-setup)
     * [Conclusion](#conclusion)
 
 ### Why I needed temp.nvim
