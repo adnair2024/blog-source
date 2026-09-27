@@ -16,8 +16,6 @@ categories = ['Neovim']
     * [Planning temp.nvim](#planning-tempnvim)
     * [The Architecture](#the-architecture)
       * [templates.lua - The Template Registry](#templateslua---the-template-registry)
-* [{{title}}](#title)
-* [{{title}}](#title)
       * [templates.lua - The rendering function](#templateslua---the-rendering-function)
       * [init.lua - Path detection](#initlua---path-detection)
     * [Conclusion](#conclusion)
@@ -167,6 +165,8 @@ directory you want; for example it could be `notes/english` if you want to autom
 generate a header for your notes in markdown. You could even go as far as making different
 headers for different subjects.
 
+#### init.lua - Input handling
+
 ```lua
 vim.ui.input({
         prompt = "Template Title (" .. chosen_template .. "): ",
@@ -195,6 +195,8 @@ Next, we call the `vim.ui.input` to open a floating text prompt that is prefille
 the default title. Once you submit it, it creates a table of the title and formatted
 timestamps and passes it to our rendering engine, then uses `vim.api.nvim_buf_set_lines`
 to inject the lines at the top of the buffer.
+
+#### init.lua - User command setup
 
 ```lua
 function M.setup(opts)
