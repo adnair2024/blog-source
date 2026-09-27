@@ -7,11 +7,6 @@ tags = ['neovim', 'coding', 'markdown', 'notes']
 categories = ['Neovim']
 +++
 
-# A quick Neovim Plugin that made writing code and blog articles easier for me
-
-## Table of Contents
-
-
 ## Table of Contents
 
 * [A quick Neovim Plugin that made writing code and blog articles easier for me](#a-quick-neovim-plugin-that-made-writing-code-and-blog-articles-easier-for-me)
