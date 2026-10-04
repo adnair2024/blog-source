@@ -15,7 +15,7 @@ a loop or a runaway recursion. While standard linters and profilers exist, they'
 at different extremes; either a flame graph or a huge wall of text with cyclomatic scores
 and Big-O notation without anything you can instantly glance at and take action. I wanted
 something lightweight that I could fire up with a single terminal command, glance at for 
-5 secondss, and instantly spot where the the bottleneck was. This is why I made `termwerm`.
+5 seconds, and instantly spot where the the bottleneck was. This is why I made `termwerm`.
 
 ##  My Issue with most Profilers
 I have two main gripes with static complexity tools:
