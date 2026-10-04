@@ -1,7 +1,7 @@
 +++
 date = '2026-10-04T16:22:40-06:00'
 draft = false
-title = 'Building termwerm: A Minimalist TUI for Auditing Function Complexity'
+title = 'termwerm'
 type = 'post'
 tags = ['coding','efficiency','markdown']
 categories = ['Coding']
