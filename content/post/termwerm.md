@@ -1,5 +1,5 @@
 +++
-date = '2026-10-04T16:22:40-06:00'
+date = '2026-10-04T16:22:40-05:00'
 draft = false
 title = 'termwerm'
 type = 'post'
